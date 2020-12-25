@@ -25,6 +25,7 @@ const Input = (props) => {
   const touchHandler = () => {
     dispatch({ type: 'TOUCH', isTouched: false });
   };
+
   const changeHandler = (event) => {
     dispatch({
       type: 'CHANGE',
@@ -34,8 +35,8 @@ const Input = (props) => {
   };
 
   const [inputState, dispatch] = useReducer(inputReducer, {
-    value: '',
-    isValid: false,
+    value: props.initialValue || '',
+    isValid: props.InitialValid || false,
     isTouched: false,
   });
 
