@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import NewPlace from './places/pages/NewPlaces';
 import Users from './user/pages/Users';
-import UserPlaces from './places/pages/UserPlaces'
-import UpdatePlaces from './places/pages/UpdatePlaces'
+import Auth from './user/pages/Auth';
+import UserPlaces from './places/pages/UserPlaces';
+import UpdatePlaces from './places/pages/UpdatePlaces';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 
 const App = () => {
@@ -24,6 +25,9 @@ const App = () => {
           </Route>
           <Route path="/places/:placeId" exact>
             <UpdatePlaces />
+          </Route>
+          <Route path="/auth" exact>
+            <Auth />
           </Route>
         </Switch>
       </main>
